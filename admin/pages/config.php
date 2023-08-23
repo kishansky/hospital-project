@@ -1,8 +1,8 @@
 <?php
 
- $hostname ="https://adarshcare.com/admin";
+ $hostname ="localhost/admin";
 
 
-  $conn = mysqli_connect("localhost","u533246364_aman","Kishan@2324","u533246364_hospital") or die("connection failed :". mysqli_connect_error());
+  $conn = mysqli_connect("localhost","root","","u533246364_hospital") or die("connection failed :". mysqli_connect_error());
 
 ?>
