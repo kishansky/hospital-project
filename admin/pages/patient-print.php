@@ -75,7 +75,7 @@ while($row = mysqli_fetch_assoc($result)) {
 <div id="header" style=" ">
     <div class="row" style="border:2px solid #000; margin:0; border-radius:20px;">
         <div class="col-2 ps-1">
-        <img src="../assets/img/logos/logo.jpg" style="height: 5rem; margin: 0;padding:1px;"></img>
+        <img src="../assets/img/logos/logo.png" style="height: 5rem; margin: 1px;border-radius:5px;padding:1px;"></img>
         </div>
         <div class="col-8">
     <div style="text-align:center;" class="pt-1">
@@ -95,24 +95,24 @@ while($row = mysqli_fetch_assoc($result)) {
     </div>
     <div class="row pt-1"style="">
     <div class="col-6 patient-label" style="padding-left:35px;">
-            Id : <?php echo $row['p_id']; ?>
+            Id : <b><?php echo "AH".$row['p_id']; ?></b>
     </div>
 
     <div class="col-6 patient-label" style="">
-            Date: <?php echo $row['date']; ?>
+            Date & Time: <b><?php echo $row['date']; ?></b>
     </div>
     </div>
     <div class="row"style="">
 
     <div class="col-6 patient-label" style="padding-left:35px;">
-            Patient Name : <?php echo ucwords($row['p_name']); ?> 
+            Patient Name : <b><?php echo ucwords($row['p_name']); ?> </b>
     </div>
     <div class="col-2 patient-label" style="">
-       Age : <?php echo $row['p_age']. " "; ?>Yrs
+       Age : <b><?php echo $row['p_age']. " "; ?>Yrs </b>
     </div>
     
     <div class="col-4 patient-label" style="">
-       Sex : <?php if($row['p_sex'] == 0){echo "Male";}elseif($row['p_sex'] == 1){echo "Female";}else{echo "other";}; ?>
+       Sex : <b><?php if($row['p_sex'] == 0){echo "Male";}elseif($row['p_sex'] == 1){echo "Female";}else{echo "other";}; ?></b>
     </div>
     
     </div>
@@ -120,11 +120,11 @@ while($row = mysqli_fetch_assoc($result)) {
     <div class="row"style="">
     
     <div class="col-6 patient-label" style="padding-left:35px;">
-            Address : <?php echo ucwords($row['p_address']); ?>
+            Address : <b><?php echo ucwords($row['p_address']); ?></b>
     </div>
 
     <div class="col-6 patient-label" style="">
-            Treatment By : <?php 
+            Treatment By : <b><?php 
                                    switch ($row['doctor']) {
                                     case '2':
                                         echo "Dr. Rasmi Rai";
@@ -143,7 +143,7 @@ while($row = mysqli_fetch_assoc($result)) {
                                         echo "Dr. Manoj Kumar";
                                         break;
                                    }
-                                ?>
+                                ?></b>
     </div>
     </div>
 
@@ -153,8 +153,8 @@ while($row = mysqli_fetch_assoc($result)) {
     
     
          
-    <div class="row" style="height:920px;margin:0;">
-    <div class="col-2" style="height:920px;margin:0;border-right:1px solid;border-top:1px solid;">
+    <div class="row" style="height:930px;margin:0;">
+    <div class="col-2" style="height:926px;margin:0;border-right:1px solid;border-top:1px solid;">
 <div class="row">
     <div class="col-12 pt-1 p-0" style="color:#000;">
         <b style="font-size:15px;">Dr.Manoj Kumar</b>
@@ -177,7 +177,7 @@ while($row = mysqli_fetch_assoc($result)) {
         <div style="font-size:12px;">M.D.(gen. medicine)</div>
     </div>
     <div class="col-12 pt-1 pb-1 p-0" style="color:#000;border-bottom: 1px solid #ccc;">
-    B.P. <b style="font-size:15px;"><?php if($row['p_bp'] ==0){echo "__";}else{ echo $row['p_bp'];} ?></b> mm of hg
+    B.P. <b style="font-size:15px;"><?php if($row['p_bp'] ==0){echo "__";}else{ echo $row['p_bp'];} ?></b> 
     </div>
     <div class="col-12 pt-1 pb-1 p-0" style="color:#000;border-bottom: 1px solid #ccc;">
     Pulse <b style="font-size:15px;"><?php if($row['p_pulse'] ==0){echo "__";}else{ echo $row['p_pulse'];} ?></b> /min
@@ -203,11 +203,15 @@ while($row = mysqli_fetch_assoc($result)) {
     <div class="col-12 pt-1 pb-1 p-0" style="color:#000;border-bottom: 1px solid #ccc;">
     LMP <b style="font-size:15px;"><?php if($row['p_lmp'] ==0){echo "__";}else{ echo $row['p_lmp'];} ?></b>
     </div>
-    <div class="col-12 pt-1 pb-1 p-0" style="color:#000;border-bottom: 1px solid #ccc;">
+    <div class="col-12 pt-1 pb-1 p-0" style="color:#000;border-bottom: 1px solid;">
     EDD <b style="font-size:15px;"><?php if($row['p_edd'] ==0){echo "__";}else{ echo $row['p_edd'];} ?></b>
+    </div>
+    <div class="col-12 pt-1 pb-1 p-0" style="color:#000;">
+      <b><u>Inv:- </u></b>
     </div>
 </div>
     </div>
+
 <div class="col-10">
     <div class="row">
     <div class="col-12"style="border-top:1px solid;height:100px;">
