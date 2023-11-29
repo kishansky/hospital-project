@@ -96,7 +96,7 @@ include "header.php";
                                       <div class="">
                                         <p class="text-xs font-weight-bold mb-0 ">Address:</p>
                                         <h6 class="text-sm font-weight-normal mb-0
-                                          "><?php echo $row['p_address']; ?></h6>
+                                          "><?php echo substr($row['p_address'],0,15)."..";  ?></h6>
                                       </div>
                                     </td>
                                     <td class="col">
