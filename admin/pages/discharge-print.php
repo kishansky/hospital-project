@@ -69,7 +69,7 @@ while($row = mysqli_fetch_assoc($result)) {
 <div id="header" style=" ">
     <div class="row" style="border:2px solid #000; margin:0; border-radius:20px;">
         <div class="col-2 ps-1">
-        <img src="../assets/img/logos/logo.jpg" style="height: 5rem; margin: 0;padding:1px;"></img>
+        <img src="../assets/img/logos/logo.png" style="height: 5rem; margin: 1px;border-radius:5px;padding:1px;"></img>
         </div>
         <div class="col-8">
     <div style="text-align:center;" class="pt-1">
@@ -91,24 +91,24 @@ while($row = mysqli_fetch_assoc($result)) {
 
     <div class="row"style="">
     <div class="col-6 patient-label" style="padding-left:35px;">
-            Id : <?php echo $p_id; ?>
+            Id : <b><?php echo "AH". $p_id; ?></b>
     </div>
 
     <div class="col-6 patient-label" style="">
-            Date: <?php echo date("Y/m/d h:i:sa" ); ?>
+            Date: <b><?php echo date("Y/m/d h:i:sa" ); ?></b>
     </div>
     </div>
     <div class="row"style="">
 
     <div class="col-6 patient-label" style="padding-left:35px;">
-            Patient Name : <?php echo ucwords($row['p_name']); ?> 
+            Patient Name : <b><?php echo ucwords($row['p_name']); ?> </b>
     </div>
     <div class="col-2 patient-label" style="">
-       Age : <?php echo $row['p_age']." "; ?>Yrs
+       Age : <b><?php echo $row['p_age']." "; ?>Yrs</b>
     </div>
     
     <div class="col-4 patient-label" style="">
-       Sex : <?php if($row['p_sex'] == 0){echo "Male";}elseif($row['p_sex'] == 1){echo "Female";}else{echo "other";}; ?>
+       Sex : <b><?php if($row['p_sex'] == 0){echo "Male";}elseif($row['p_sex'] == 1){echo "Female";}else{echo "other";}; ?></b>
     </div>
     
     </div>
@@ -116,33 +116,33 @@ while($row = mysqli_fetch_assoc($result)) {
     <div class="row"style="">
     
     <div class="col-6 patient-label" style="padding-left:35px;">
-            Address : <?php echo ucwords($row['p_address']); ?>
+            Address : <b><?php echo ucwords($row['p_address']); ?></b>
     </div>
     
     <div class="col-6 patient-label" style="">
-            Mobile No : <?php echo $row['p_mobile']; ?> 
+            Mobile No : <b><?php echo $row['p_mobile']; ?></b> 
     </div>
     
     </div>
     <div class="row"style="">
 
     <div class="col-6 patient-label" style="padding-left:35px;">
-            Admission Date : <?php echo $row['date']; ?> 
+            Admission Date : <b><?php echo $row['date']; ?></b> 
     </div>
     
     <div class="col-6 patient-label" style="">
-            Discharge Date : <?php if(empty($_POST['date'])){
+            Discharge Date : <b><?php if(empty($_POST['date'])){
               echo $row['d_date']; 
             }else{
             echo $_POST['date'];
-            } ?>
+            } ?></b>
     </div>
     
     </div>
     <div class="row"style="">
 
     <div class="col-6 patient-label" style="padding-left:35px;">
-            Treatment By : <?php 
+            Treatment By : <b><?php 
                                    switch ($row['doctor']) {
                                     case '2':
                                         echo "Dr. Rasmi Rai";
@@ -161,11 +161,11 @@ while($row = mysqli_fetch_assoc($result)) {
                                         echo "Dr. Manoj Kumar";
                                         break;
                                    }
-                                ?>
+                                ?></b>
     </div>
     
     <div class="col-6 patient-label" style="">
-    Operated/Pocedure By : <?php echo ucwords($_POST['operated']); ?>
+    Operated/Pocedure By : <b><?php echo ucwords($_POST['operated']); ?></b>
     </div>
     
     </div>
