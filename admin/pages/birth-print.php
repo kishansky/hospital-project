@@ -63,7 +63,7 @@ if(!isset($_SESSION["user_name"])){
 <div id="header" style=" ">
     <div class="row" style="border:2px solid #000; margin:0; border-radius:20px;">
         <div class="col-2 ps-1">
-        <img src="../assets/img/logos/logo.jpg" style="height: 5rem; margin: 0;padding:1px;"></img>
+        <img src="../assets/img/logos/logo.png" style="height: 5rem; margin: 1px;border-radius:5px;padding:1px;"></img>
         </div>
         <div class="col-8">
     <div style="text-align:center;" class="pt-1">
