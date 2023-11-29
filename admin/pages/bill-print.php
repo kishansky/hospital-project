@@ -72,10 +72,11 @@ while($row = mysqli_fetch_assoc($result)) {
 <body>
     <!--startprint-->
 <div id="printarea" style="width: 210mm; height: 300mm;">
+    <div>
 <div id="header" style=" ">
     <div class="row" style="border:2px solid #000; margin:0; border-radius:20px;">
         <div class="col-2 ps-1">
-        <img src="../assets/img/logos/logo.jpg" style="height: 5rem; margin: 0;padding:1px;"></img>
+        <img src="../assets/img/logos/logo.png" style="height: 5rem; margin: 1px;border-radius:5px;padding:1px;"></img>
         </div>
         <div class="col-8">
     <div style="text-align:center;" class="pt-1">
@@ -95,24 +96,24 @@ while($row = mysqli_fetch_assoc($result)) {
     </div>
     <div class="row pt-1"style="">
     <div class="col-6 patient-label" style="padding-left:35px;">
-            Id : <?php echo $row['p_id']; ?>
+            Id : <b><?php echo "AH".$row['p_id']; ?></b>
     </div>
 
     <div class="col-6 patient-label" style="">
-            Date: <?php echo $row['date']; ?>
+            Date & Time: <b><?php echo $row['date']; ?></b>
     </div>
     </div>
     <div class="row"style="">
 
     <div class="col-6 patient-label" style="padding-left:35px;">
-            Patient Name : <?php echo ucwords($row['p_name']); ?> 
+            Patient Name : <b><?php echo ucwords($row['p_name']); ?> </b>
     </div>
     <div class="col-2 patient-label" style="">
-       Age : <?php echo $row['p_age']. " "; ?>Yrs
+       Age : <b><?php echo $row['p_age']. " "; ?>Yrs</b>
     </div>
     
     <div class="col-4 patient-label" style="">
-       Sex : <?php if($row['p_sex'] == 0){echo "Male";}elseif($row['p_sex'] == 1){echo "Female";}else{echo "other";}; ?>
+       Sex : <b><?php if($row['p_sex'] == 0){echo "Male";}elseif($row['p_sex'] == 1){echo "Female";}else{echo "other";}; ?></b>
     </div>
     
     </div>
@@ -120,7 +121,7 @@ while($row = mysqli_fetch_assoc($result)) {
     <div class="row"style="">
     
     <div class="col-6 patient-label" style="padding-left:35px;">
-            Address : <?php echo ucwords($row['p_address']); ?>
+            Address : <b><?php echo ucwords($row['p_address']); ?></b>
     </div>
 
     
@@ -283,9 +284,7 @@ echo $output;
 
     </table>
     </div>
-
-
-         </div>
+</div>
          <div class="row" style="height:50px;margin:0;">
             <div class="col-3 offset-9">
                 Cashier's Signature
@@ -317,7 +316,8 @@ echo $output;
       </div>
     </div>
     </div>
-    </div>
+</div>
+</div>
    
 <!--endprint-->
 <div class="row">
